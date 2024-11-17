@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio 1 Inteligencia Artificial</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">O que é inteligência artificial?</a>
+        <a href="history.html">Histórico.</a>
+        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos.</a>
+        <a href="agentes_ambientes.html">Agentes e ambientes.</a>
+        <a href="index.html">Racionalidade.</a>
+        <a href="index.html">Especificando o ambiente de tarefas.</a>
+        <a href="index.html">Arquitetura do agente.</a>
+        <a href="index.html">Representação de estados</a>
+        <a href="index.html">Discussões</a>
+        <a href="index.html">Projetos e problemas</a>
+    </div>
+
+    <h2>Ação de um agente</h2>
+    <p>
+        As ações de um agente determinam o que ele pode ou não fazer dependendo das circunstâncias em que se encontra, as ações 
+        são totalmente conceituais e não descrevem como será feito o processo.
+
+        Existem quatro fatores que podem alterar as ações que um agente vai tomar a primeira delas é o conhecimento prévio, ou seja, 
+        coisas que o agente considera como regras, que ele considera positivo e negativo e que limitações este deve seguir, estes podem 
+        ter sido colocados manualmente no agente ou apreendidos por experiências prévias, esse conjunto de tudo o que o agente percebeu 
+        é conhecido como a sequência de percepções.
+
+        A segunda são os sensores que possui o agente, o tipo de sensores que possui modificarão como este perceberá o ambiente e por 
+        conseguinte que conhecimento pode aprender, esta informação que o agente está percebendo é chamada de percepção, por exemplo um 
+        agente sem sensores visuais talvez consiga aprender qual é a forma de uma sala através do toque mas não conseguirá aprender 
+        de que cor é ou quão desordenada está a sala ou quanto sujo o chão está.
+
+        A terceira são os atuadores que o agente possui, estes são o que permite ao agente interagir e modificar seu ambiente, estes 
+        determinarão quais atividades pode ou não fazer, por exemplo um agente que tem rodas pode se mover no chão, mas se um lugar 
+        que deseja acessar esta alto não poderá alcançá-lo por não ter a capacidade de voar ou escalar.
+
+        A última é o ambiente em si, depois de tudo é daqui que sai a informação que o agente pode perceber, este é provavelmente 
+        o que mais afeta as ações de um agente pois todos os outros pontos dependem dele, um exemplo de como o ambiente afeta as 
+        ações de um agente pode ser em quão rápido ele muda, enquanto em um ambiente que não muda muito o agente continuaria realizando 
+        o mesmo conjunto de ações em um ambiente que muda constantemente o agente deverá mudar seu curso de ações constantemente.
+    </p>
+    
+    <h2>Função agente</h2>
+    <p>
+        A função de um agente é a implementação das ações dependendo do estado atual do ambiente e dos estados anteriores já 
+        percebidos, ou seja, se o ambiente esta em condição A é realizada ação B, é um mapeamento que une o ambiente com as ações 
+        a serem realizadas.
+
+        Um exemplo disso poderia ser em um estacionamento onde as ações são avançar, retroceder, estacionar ou esperar, se o espaço 
+        que está perto é livre a ação é estacionar, mas se o espaço perto que está livre também esta reservado para deficientes a 
+        ação será avançar, se o espaço ao qual se está perto está ocupado mas um espaço atrás de nós acaba de liberar a ação séria 
+        retroceder, se no espaço perto a nós há um carro tentando sair da ação seria esperar e assim sucessivamente com muitas 
+        outras sequências de condições.
+    </p>
+
+    <h2>Programa agente</h2>
+    <p>
+        O programa de agente é a implementação das funções de agente em um sistema físico, ou seja, é a codificação formal das 
+        funções de agente em uma linguagem de programação seguindo a arquitetura que ele demanda.
+
+        Um exemplo de um programa da função do estacionamento já apresentado seria:
+
+    <div class = "program-example">
+        if location_status = free then
+            if handicapped = false then
+                park
+            else
+                if previous_location_status = free then
+                    reverse
+                else
+                    forward
+        else if location_status = vacating then
+            wait
+        else if location_status = occupied then
+            if previous_location_status = free then
+                reverse
+            else
+                forward
+    </div>
+    </p>
+
+</body>
+</html>
