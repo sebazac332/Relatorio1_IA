@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio 1 Inteligencia Artificial</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">O que é inteligência artificial?</a>
+        <a href="history.html">Histórico.</a>
+        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos.</a>
+        <a href="agentes_ambientes.html">Agentes e ambientes.</a>
+        <a href="rationality.html">Racionalidade.</a>
+        <a href="ambiente_tarefas.html">Especificando o ambiente de tarefas.</a>
+        <a href="index.html">Arquitetura do agente.</a>
+        <a href="index.html">Representação de estados</a>
+        <a href="index.html">Discussões</a>
+        <a href="index.html">Projetos e problemas</a>
+    </div>
+    
+    <h2>Descrição PEAS</h2>
+    <p>
+        A descrição PEAS é usada para definir aspectos importantes de um agente, sendo estes a medida de desempenho, o ambiente, 
+        os sensores e os atuadores.
+
+        Stuart Russell e Peter Norvig entrar em mais detalhes explicando cada um:
+        - Medida de desempenho é o que o agente aspira a alcançar, quais são os seus objetivos.
+        - O ambiente é o lugar ao qual o agente se enfrentará, quais são os objetos que o compõem.
+        - Atuadores são as ferramentas que o agente possui.
+        - Sensores são os objetos que o agente tem que lhe permitem recolher informação.
+
+        O problema que usaremos para trabalhar aqui será o mapeamento de cavernas, esta é uma atividade muito perigosa, entre 
+        os vários riscos estão colapsos, inundações, falta de oxigênio, gases tóxicos e é muito possibile ficar preso pelo estreito que 
+        é o terreno; o uso de drones que mapeiam as cavernas e marcam pontos de interesse praticamente anula o risco durante a exploração 
+        e minimiza-o em operações posteriores pois a equipe já sabe exatamente para onde deve ir e qual é a rota; atualmente drones são 
+        pilotados por humanos, mas com treinamento suficiente, esse controle poderia ser deixado para uma IA.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de agente</th>
+                <th>Medida de desempenho</th>
+                <th>Ambiente</th>
+                <th>Atuadores</th>
+                <th>Sensores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Drone explorador</td>
+                <td>Preciso, completo, seguro, eficiência energética, impacto mínimo na caverna, volta ao ponto de partida</td>
+                <td>Solo, paredes, pedras, estalagmites, água, abismos</td>
+                <td>Hélices, sistema de controle, trem de pouso, pára-quedas de emergência</td>
+                <td>Câmara de alta definição, lanterna, câmera LIDAR, sensores de proximidade, sensores de gases, sensores infravermelhos</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Propriedades do ambiente de tarefas</h2>
+    <p>
+        As propriedades do ambiente são uma parte muito importante que deve ser considerada ao projetar um agente, elas determinam 
+        como deve ser projetado e quais técnicas podem ser usadas para sua implementação, segundo Stuart Russell e Peter Norvig estes
+        são os seguintes:
+
+        Totalmente observável/parcialmente observável: Se os sensores permitem que o agente veja todos os aspectos relevantes do 
+        ambiente, ele é totalmente observável, caso contrário, ele é considerado parcialmente observável.
+
+        Único agente/multiagente: Depende de quantos agentes estão atuando no ambiente, para essa propriedade é considerada como 
+        agente a qualquer objeto cujo comportamento tenta maximizar uma métrica de desempenho que é afetada diretamente pelo nosso 
+        agente; se houver apenas um agente o ambiente é de único agente se há mais é multiagente.
+
+        Deterministico/não-determinístico: Um ambiente é considerado determinístico se quando se realiza um conjunto específico de 
+        ações estas dão sempre o mesmo resultado, se as mesmas ações realizadas várias vezes dão resultados diferentes é 
+        não-determinístico.
+
+        Episódico/sequencial: É considerado episódico se as tarefas do agente são divididas em ciclos, uma vez terminado um ciclo o 
+        ambiente volta ao seu estado inicial; sequencial as ações do agente alteram permanentemente o ambiente que por sua vez altera 
+        as futuras ações do agente.
+
+        Estatico/dinâmico: um ambiente é considerado estatico quando só pode mudar quando um agente age, se o ambiente muda mesmo 
+        que um agente não tenha realizado uma ação é considerado dinâmico.
+
+        Discreto/contínuo: um ambiente é considerado discreto se ele tem um número limitado de ações possíveis, se as ações que podem 
+        ser tomadas são demais para contá-las é considerado contínuo.
+
+        Conhecido/desconhecido: um ambiente é considerado conhecido quando se sabe quais são as regras e consequências destas que o 
+        regem, se as regras não são conhecidas é considerado desconhecido.
+
+        Para o caso dado acima sobre o drone de mapeamento de cavernas as características do ambiente são os seguintes:
+
+        Parcialmente observável, porque o drone só é capaz de observar um segmento da caverna de cada vez, não é capaz de ver toda a 
+        caverna ao mesmo tempo.
+
+        Único agente, apenas um drone será usado para mapear uma caverna, durante a exploração não haverá outras entidades na caverna, 
+        exceto talvez de pequenos animais que não serão considerados agentes já que as métricas que tentam maximizar não estão 
+        relacionadas no mínimo ao nosso agente.
+
+        Não determinística, uma caverna é um ambiente que pode sofrer muitas mudanças e possui muitos obstáculos desconhecidos, isso 
+        torna difícil saber qual será o resultado das ações do agente.
+
+        Sequencial, uma caverna é um ambiente vivo, uma vez que se realiza uma mudança não há forma de voltar exatamente como era 
+        antes, certas ações do agente poderiam alterar a geografia da caverna.
+
+        Dinamica, o estado de uma caverna pode mudar a qualquer momento, seja uma inundação por uma chuva no exterior ou desabamentos 
+        por rachaduras que se formam na rocha, estes fenômenos podem ocorrer por fatores independentes do agente.
+
+        Continuo, as ações que o drone pode realizar na caverna são muitas, ele pode se mover para frente, para cima, diagonalmente, 
+        ativar lanterna, mover alguma pedra, entre outras; é impossível contá-las todas, pois além disso há muitas ações que dependerão 
+        do que se encontra dentro da caverna.
+
+        Desconhecido: Embora existam certas regras de segurança em que você pode contar durante a varredura, a verdade é que não se 
+        sabe exatamente quais regras regem uma caverna considerando também que os fatores que existem nesta mudam constantemente por 
+        isso as regras mudariam também.
+    </p>
+
+</body>
+</html>
