@@ -7,42 +7,43 @@
 <body>
     <div class="navbar">
         <a href="index.html">O que é inteligência artificial?</a>
-        <a href="history.html">Histórico.</a>
-        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos.</a>
-        <a href="agentes_ambientes.html">Agentes e ambientes.</a>
-        <a href="rationality.html">Racionalidade.</a>
-        <a href="ambiente_tarefas.html">Especificando o ambiente de tarefas.</a>
-        <a href="architecture.html">Arquitetura do agente.</a>
-        <a href="agent_type.html">Tipos de agente.</a>
+        <a href="history.html">Histórico</a>
+        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos</a>
+        <a href="agentes_ambientes.html">Agentes e ambientes</a>
+        <a href="rationality.html">Racionalidade</a>
+        <a href="ambiente_tarefas.html">Especificando o ambiente de tarefas</a>
+        <a href="architecture.html">Arquitetura do agente</a>
+        <a href="agent_type.html">Tipos de agente</a>
         <a href="state_representation.html">Representação de estados</a>
+        <a href="references.html">Referências</a>
     </div>
 
     <p>
         É sabido que o objetivo de um agente racional é tomar as decisões certas e realizar as ações corretas, o que é certo pode 
         ser algo difícil de definir, felizmente no campo da inteligência artificial já se tem algumas formas de medir isso.
-        
+        <br>
         A forma que se tem para medir consiste em verificar quais são os efeitos das ações realizadas pelo agente, quando um agente 
         é colocado num ambiente este realiza ações dependendo do que é percebido, estas ações por sua vez alteram o ambiente, se o 
         estado do ambiente uma vez alterado é desejado considera-se que o agente realizou as ações corretas.
-
+        <br>
         Para que isso funcione, você precisa ser capaz de definir o que é desejável, Embora se possa fazer tais definições em relação 
         ao comportamento que deve ter o agente é muito melhor em termos de resultados realizar as definições em relação às mudanças 
         que se quer alcançar no ambiente.
-
-        Uma definição um pouco mais formal do que é racional nos é dada por Stuart Russell e Peter Norvig e depende de quatro fatores:
-        - A medida de desempenho que define o critério de sucesso.
-        - Conhecimento prévio do agente sobre o ambiente.
-        - Quais são as ações que o agente pode realizar.
-        - A sequência de percepção que o agente tem até o momento.
+        <br>
+        Uma definição um pouco mais formal do que é racional nos é dada por Stuart Russell e Peter Norvig e depende de quatro fatores:<br>
+        • A medida de desempenho que define o critério de sucesso.<br>
+        • Conhecimento prévio do agente sobre o ambiente.<br>
+        • Quais são as ações que o agente pode realizar.<br>
+        • A sequência de percepção que o agente tem até o momento.<br>
         Tomando estes quatro fatores e juntando-os, temos uma descrição de um agente racional tal que, um agente racional para cada 
         sequência de percepções deve selecionar uma ação que se espera maximizar a medida de desempenho com evidência dada pela 
         sequência de percepções e com o conhecimento previamente adquirido.
-
+        <br>
         Um erro comum é confundir racionalidade com onisciência, um agente onisciente já sabe quais são os resultados exatos de suas 
         ações e é impossível criar na realidade. A diferença entre o racional e o perfeito produto da onisciência é que o racional 
         maximiza o desempenho esperado enquanto o perfeito maximiza o desempenho atual, um só pode fazer suposições com base no que 
         já observou enquanto o outro sabe exatamente o que vai acontecer.
-
+        <br>
         Porque a eficácia de um agente racional depende do que é observado e aprendido a atividade de coleta de informação é muito 
         importante, também deve ter a capacidade de aprender o máximo possível das informações coletadas e modificar o que se sabe 
         a partir disso; quando um agente pode confiar em suas habilidades de aprendizagem e percepção mais do que no conhecimento 
