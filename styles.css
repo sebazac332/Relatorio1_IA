@@ -114,3 +114,8 @@ th {
     }
 }
 
+p {
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.6;
+}
