@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatorio 1 Inteligencia Artificial</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="navbar">
@@ -24,10 +25,10 @@
         os sensores e os atuadores.
         <br>
         Stuart Russell e Peter Norvig entrar em mais detalhes explicando cada um:<br>
-        - Medida de desempenho é o que o agente aspira a alcançar, quais são os seus objetivos.<br>
-        - O ambiente é o lugar ao qual o agente se enfrentará, quais são os objetos que o compõem.<br>
-        - Atuadores são as ferramentas que o agente possui.<br>
-        - Sensores são os objetos que o agente tem que lhe permitem recolher informação.<br>
+        • Medida de desempenho é o que o agente aspira a alcançar, quais são os seus objetivos.<br>
+        • O ambiente é o lugar ao qual o agente se enfrentará, quais são os objetos que o compõem.<br>
+        • Atuadores são as ferramentas que o agente possui.<br>
+        • Sensores são os objetos que o agente tem que lhe permitem recolher informação.<br>
 
         O problema que usaremos para trabalhar aqui será o mapeamento de cavernas, esta é uma atividade muito perigosa, entre 
         os vários riscos estão colapsos, inundações, falta de oxigênio, gases tóxicos e é muito possibile ficar preso pelo estreito que 
@@ -63,53 +64,53 @@
         como deve ser projetado e quais técnicas podem ser usadas para sua implementação, segundo Stuart Russell e Peter Norvig estes
         são os seguintes:
         <br>
-        Totalmente observável/parcialmente observável: Se os sensores permitem que o agente veja todos os aspectos relevantes do 
+        • Totalmente observável/parcialmente observável: Se os sensores permitem que o agente veja todos os aspectos relevantes do 
         ambiente, ele é totalmente observável, caso contrário, ele é considerado parcialmente observável.
         <br>
-        Único agente/multiagente: Depende de quantos agentes estão atuando no ambiente, para essa propriedade é considerada como 
+        • Único agente/multiagente: Depende de quantos agentes estão atuando no ambiente, para essa propriedade é considerada como 
         agente a qualquer objeto cujo comportamento tenta maximizar uma métrica de desempenho que é afetada diretamente pelo nosso 
         agente; se houver apenas um agente o ambiente é de único agente se há mais é multiagente.
         <br>
-        Deterministico/não-determinístico: Um ambiente é considerado determinístico se quando se realiza um conjunto específico de 
+        • Deterministico/não-determinístico: Um ambiente é considerado determinístico se quando se realiza um conjunto específico de 
         ações estas dão sempre o mesmo resultado, se as mesmas ações realizadas várias vezes dão resultados diferentes é 
         não-determinístico.
         <br>
-        Episódico/sequencial: É considerado episódico se as tarefas do agente são divididas em ciclos, uma vez terminado um ciclo o 
+        • Episódico/sequencial: É considerado episódico se as tarefas do agente são divididas em ciclos, uma vez terminado um ciclo o 
         ambiente volta ao seu estado inicial; sequencial as ações do agente alteram permanentemente o ambiente que por sua vez altera 
         as futuras ações do agente.
         <br>
-        Estatico/dinâmico: um ambiente é considerado estatico quando só pode mudar quando um agente age, se o ambiente muda mesmo 
+        • Estatico/dinâmico: um ambiente é considerado estatico quando só pode mudar quando um agente age, se o ambiente muda mesmo 
         que um agente não tenha realizado uma ação é considerado dinâmico.
         <br>
-        Discreto/contínuo: um ambiente é considerado discreto se ele tem um número limitado de ações possíveis, se as ações que podem 
+        • Discreto/contínuo: um ambiente é considerado discreto se ele tem um número limitado de ações possíveis, se as ações que podem 
         ser tomadas são demais para contá-las é considerado contínuo.
         <br>
-        Conhecido/desconhecido: um ambiente é considerado conhecido quando se sabe quais são as regras e consequências destas que o 
+        • Conhecido/desconhecido: um ambiente é considerado conhecido quando se sabe quais são as regras e consequências destas que o 
         regem, se as regras não são conhecidas é considerado desconhecido.
         <br>
         Para o caso dado acima sobre o drone de mapeamento de cavernas as características do ambiente são os seguintes:
         <br>
-        Parcialmente observável, porque o drone só é capaz de observar um segmento da caverna de cada vez, não é capaz de ver toda a 
+        • Parcialmente observável, porque o drone só é capaz de observar um segmento da caverna de cada vez, não é capaz de ver toda a 
         caverna ao mesmo tempo.
         <br>
-        Único agente, apenas um drone será usado para mapear uma caverna, durante a exploração não haverá outras entidades na caverna, 
+        • Único agente, apenas um drone será usado para mapear uma caverna, durante a exploração não haverá outras entidades na caverna, 
         exceto talvez de pequenos animais que não serão considerados agentes já que as métricas que tentam maximizar não estão 
         relacionadas no mínimo ao nosso agente.
         <br>
-        Não determinística, uma caverna é um ambiente que pode sofrer muitas mudanças e possui muitos obstáculos desconhecidos, isso 
+        • Não determinística, uma caverna é um ambiente que pode sofrer muitas mudanças e possui muitos obstáculos desconhecidos, isso 
         torna difícil saber qual será o resultado das ações do agente.
         <br>
-        Sequencial, uma caverna é um ambiente vivo, uma vez que se realiza uma mudança não há forma de voltar exatamente como era 
+        • Sequencial, uma caverna é um ambiente vivo, uma vez que se realiza uma mudança não há forma de voltar exatamente como era 
         antes, certas ações do agente poderiam alterar a geografia da caverna.
         <br>
-        Dinamica, o estado de uma caverna pode mudar a qualquer momento, seja uma inundação por uma chuva no exterior ou desabamentos 
+        • Dinamica, o estado de uma caverna pode mudar a qualquer momento, seja uma inundação por uma chuva no exterior ou desabamentos 
         por rachaduras que se formam na rocha, estes fenômenos podem ocorrer por fatores independentes do agente.
         <br>
-        Continuo, as ações que o drone pode realizar na caverna são muitas, ele pode se mover para frente, para cima, diagonalmente, 
+        • Continuo, as ações que o drone pode realizar na caverna são muitas, ele pode se mover para frente, para cima, diagonalmente, 
         ativar lanterna, mover alguma pedra, entre outras; é impossível contá-las todas, pois além disso há muitas ações que dependerão 
         do que se encontra dentro da caverna.
         <br>
-        Desconhecido: Embora existam certas regras de segurança em que você pode contar durante a varredura, a verdade é que não se 
+        • Desconhecido: Embora existam certas regras de segurança em que você pode contar durante a varredura, a verdade é que não se 
         sabe exatamente quais regras regem uma caverna considerando também que os fatores que existem nesta mudam constantemente por 
         isso as regras mudariam também.
     </p>
