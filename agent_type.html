@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio 1 Inteligencia Artificial</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">O que é inteligência artificial?</a>
+        <a href="history.html">Histórico.</a>
+        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos.</a>
+        <a href="agentes_ambientes.html">Agentes e ambientes.</a>
+        <a href="rationality.html">Racionalidade.</a>
+        <a href="ambiente_tarefas.html">Especificando o ambiente de tarefas.</a>
+        <a href="architecture.html">Arquitetura do agente.</a>
+        <a href="agent_type.html">Tipos de agente.</a>
+        <a href="state_representation.html">Representação de estados</a>
+    </div>
+
+    <p>
+        Segundo Stuart Russell e Peter Norvig existem 5 tipos de agentes, agentes de reflexos simples, agentes de reflexo baseados 
+        no modelo, agentes orientados a objetivos, agentes baseados em utilidade e finalmente agentes de aprendizagem.
+
+        Agentes de reflexos simples, é o tipo mais simples de agente que existe, atua apenas com base no que ele recebe atualmente 
+        sem levar em conta o já percebido anteriormente, sua ação se baseia em uma condição é cumprida o agente realiza uma ação caso 
+        contrário não agir; não é capaz de mudar por conta própria, se houver uma alteração ao ambiente as regras devem ser atualizadas 
+        manualmente. Um exemplo de um agente assim, seria um motorista em um semáforo, se o semáforo é verde avança; se não, não faz 
+        nada. Este tipo de agente só age corretamente em ambientes totalmente observáveis, em ambientes parcialmente observáveis tende 
+        a inevitavelmente entrar em loops infinitos, neste caso, digamos que o semáforo está fora de serviço quando passa este a luz 
+        amarela do semáforo pisca, o agente só é capaz de identificar luz verde ou não luz verde, por isso neste caso ele vai ficar 
+        parado. Isso pode ser resolvido adicionando aleatoriedade às ações.
+
+        Agente de reflexo baseado no modelo, para lidar com ambientes parcialmente observáveis este agente para perceber o ambiente 
+        atualmente tem um estado interno baseado no observado anteriormente, para atualizar esse estado corretamente o agente deve 
+        possuir dois conhecimentos, primeiro como suas ações afetam o ambiente e como o ambiente muda independente de suas ações, 
+        segundo como as percepções do agente refletem o estado do mundo, por exemplo, quando o semáforo está prestes a indicar os 
+        carros para parar a cor da luz será amarelo.
+
+        Agente baseado em objetivo, este tipo de agente combina o modelo previamente discutido com um objetivo, que é uma definição 
+        de uma situação que é desejável, um agente baseado em reflexo não sabe porque ele pára quando um semáforo dá luz vermelha 
+        mas um agente baseado em objetivo sabe que é para cumprir o objetivo de não atropelar um pedestre ou não bater com outro carro.
+
+        Agente baseado em utilidade, objetivos não são suficientes para gerar comportamento de qualidade, existem diferentes formas de 
+        cumprir um objetivo alguns são melhores do que outros, agentes baseados em objetivos funcionam com um sistema de felicidade, 
+        No entanto, este é muito simples com a situação desejada fazendo o agente feliz enquanto uma situação indesejada faz ele não 
+        feliz, em agentes baseados na utilidade levam em conta as ações tomadas para chegar ao objetivo para determinar quão feliz o 
+        agente é, Isso é conhecido como função de utilidade, esta pode ser usada para comparar objetivos se você tem múltiplos e não 
+        pode cumprir todos.
+
+        Agentes de aprendizagem, são capazes de atuar em ambientes desconhecidos tornando-se cada vez melhores aprendendo com 
+        experiências passadas e adaptando-se; eles são formados por quatro componentes, o primeiro é o elemento de aprendizagem 
+        que se encarrega de fazer melhorias e aprender do ambiente, depois vem o elemento de desempenho que seleciona ações externas 
+        a realizarar, de lá vem o crítico que se encarrega de enviar feedback ao elemento de aprendizagem em relação a uma métrica 
+        de desempenho fixa e, finalmente, tem o gerador de problemas que sugere ações que levarão a novas situações e experiências, 
+        Isso faz com o propósito de coletar novas informações para seu aprendizado.
+
+        De acordo com a informação obtida de geeksforgeeks existem dois tipos mais de agentes, estes são:
+
+        Sistemas multiagentes, são um conjunto de agentes autônomos ou semi-autônomos que trabalham juntos para cumprir um objetivo, 
+        se dividem em dois homogêneos, onde todos os agentes têm as mesmas capacidades, comportamentos e objetivos e heterogeneos
+        onde os agentes têm capacidades, comportamentos e objetivos diferentes.
+
+        Agentes hierárquicos, agentes organizados em uma hierarquia onde agentes de alto nível supervisionam os comportamentos dos 
+        agentes de nível mais baixo, agentes de alto nível são responsáveis por definir objetivos e limites para os agentes de nível 
+        inferior, estes são tipicamente baseados no objetivo que o sistema tenta cumprir; agentes de nível baixo encarregam-se de 
+        completar tarefas específicas definidas pelos agentes de nível alto, estas podem ser simples ou complexas; a hierarquia do 
+        sistema pode ser simples, tendo apenas agentes de alto e baixo nível ou pode ser complexa com múltiplos níveis e agentes 
+        intermediários.
+    </p>
+    
+</body>
+</html>

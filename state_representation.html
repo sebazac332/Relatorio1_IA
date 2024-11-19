@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio 1 Inteligencia Artificial</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">O que é inteligência artificial?</a>
+        <a href="history.html">Histórico.</a>
+        <a href="art_pros_cons.html">Estado da Arte, Benefícios e Riscos.</a>
+        <a href="agentes_ambientes.html">Agentes e ambientes.</a>
+        <a href="rationality.html">Racionalidade.</a>
+        <a href="ambiente_tarefas.html">Especificando o ambiente de tarefas.</a>
+        <a href="architecture.html">Arquitetura do agente.</a>
+        <a href="agent_type.html">Tipos de agente.</a>
+        <a href="state_representation.html">Representação de estados</a>
+    </div>
+
+    <p>
+        Segundo Stuart Russell e Peter Norvig existem três formas em que se pode representar os componentes que compõem um ambiente, 
+        estas são representação atómica, representação fatorizada e representação estruturada.
+
+        Representação atómica, cada estado do mundo é indivisível e sem estrutura interna, trata-se o estado como uma caixa preta, 
+        sabe-se o que é mas não se sabe que o compõe ou como funciona, um exemplo seria uma cidade, sabe-se qual é o nome e se esta 
+        é igual ou diferente a outras cidades mas não se sabe o que é o que contém.
+
+        Representação fatorada, cada estado é dividido em um número de variáveis ou atributos cada um com um valor, no caso da cidade 
+        estes podem ser quantidade de habitantes, número de veículos, quantidade de edifícios, número de parques entre outros; Isso 
+        nos ajuda a comparar estados e ter uma noção de que deve ser alterado para converter um estado para outro.
+
+        Representação estruturada, aqui não só são representados objetos de um estado mas também as relações entre cada um, um exemplo 
+        disso seria uma pessoa que está no processo de abordar um ônibus, este ônibus a sua vez tem uma rota específica que está 
+        seguindo.
+
+        Essas representações estão em um eixo de expressividade, que significa a quantidade de coisas que podem capturar, sendo atômica 
+        a menos expressiva e estruturada a mais expressiva; representações mais expressivas são capazes de capturar tudo o que uma 
+        representação menos expressiva pode com muito menos espaço, algo que com representação estruturada pode ser descrito em uma 
+        página vai precisar de milhares de páginas para ser descrito com uma representação fatorada e ainda mais com uma representação 
+        atômica, a desvantagem disso é que o raciocínio e a aprendizagem se tornam mais complexos ao aumentar a expressividade.
+    </p>
+</body>
+</html>
