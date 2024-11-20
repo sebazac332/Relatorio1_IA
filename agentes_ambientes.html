@@ -64,23 +64,23 @@
         <br>
         Um exemplo de um programa da função do estacionamento já apresentado seria:
         <br>
-    <div class = "program-example">
-        if location_status = free then<br>
-            if handicapped = false then<br>
-                park<br>
-            else<br>
-                if previous_location_status = free then<br>
-                    reverse<br>
-                else<br>
-                    forward<br>
-        else if location_status = vacating then<br>
-            wait<br>
-        else if location_status = occupied then<br>
-            if previous_location_status = free then<br>
-                reverse<br>
-            else<br>
-                forward<br>
-    </div>
+        <div class="program-example">
+            if location_status = free then<br>
+            &emsp; if handicapped = false then<br>
+            &emsp;&emsp; park<br>
+            &emsp; else<br>
+            &emsp;&emsp; if previous_location_status = free then<br>
+            &emsp;&emsp;&emsp; reverse<br>
+            &emsp;&emsp; else<br>
+            &emsp;&emsp;&emsp; forward<br>
+            else if location_status = vacating then<br>
+            &emsp; wait<br>
+            else if location_status = occupied then<br>
+            &emsp; if previous_location_status = free then<br>
+            &emsp;&emsp; reverse<br>
+            &emsp; else<br>
+            &emsp;&emsp; forward<br>
+        </div>
     </p>
 
 </body>

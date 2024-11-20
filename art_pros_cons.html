@@ -26,7 +26,35 @@
         como esta pode se desenvolver de 30 a 50 a 70 anos no futuro, Leva em conta as oportunidades e desafios tecnológicos e sociais 
         que esses avanços podem trazer, incluindo campos como a ética, economia e o design de sistemas combativeis com a cognição 
         humana. Isso é feito com o objetivo de guiar o desenvolvimento de inteligências artificiais para um que seja benéfico para 
-        as pessoas e também para minimizar a incerteza sobre o futuro das IAs.
+        as pessoas e também para minimizar a incerteza sobre o futuro das IAs.<br>
+        Um dos temas que foram discutidos no AI100 que parece bastante interessante é de halucinações em inteligência artificial, estas 
+        são respostas que são gramaticamente corretas e coerentes que apresentam informação que é crível mas incorreta; Isso geralmente 
+        acontece mais frequentemente em LLM - large language models (grandes modelos de linguagem). <br>
+        Algumas causas para halucinações podem ser:<br>
+        <b>Dados de treinamento incompletos:</b> A falta de dados completos, precisos, relevantes ou corretos pode causar lacunas ou erros 
+        na compreensão do modelo, é difícil verificar todos os dados porque os modelos de linguagem treinam com conjuntos de dados 
+        diferentes de origens múltiplas de forma não supervisionada.<br>
+        <b>Indicações:</b> Se as indicações ou perguntas dadas ao modelo são ambíguas ou precisam de contexto para serem entendidas, elas 
+        podem levar a respostas sem sentido ou incorretas.<br>
+        <b>Especificações:</b> Treinamento muito especificado em certos resultados como respostas muito longas podem levar o modelo a produzir 
+        mais conteúdo que pode levar a halucinações, o mesmo problema é encontrado quando o treinamento é muito geral.<br>
+        <b>Preconceitos:</b> O modelo pode herdar certos preconceitos encontrados na data de treinamento, o que pode levar a suposições 
+        que resultam em alucinações. <br>
+        <b>Ausência de dados atualizados:</b> A incapacidade de acessar dados em tempo real dos LMLs pode limitar sua compreensão e causar erros.<br>
+        As alucinações de LLM podem ser divididas em dois grupos:<br>
+        <b>Halucinações de factualidade:</b> Isso ocorre quando o modelo gera respostas que são objetivamente corretas, por exemplo se 
+        perguntamos a um modelo de qual cor é o céu e este responde que é vermelho.
+        Estes, por sua vez, são divididos em dois subtipos:<br>
+        • <b>Inconsistência factual:</b> Onde respostas incorretas são dadas com relação a e usando informações do mundo real.<br>
+        • <b>Fabricação factual:</b> Onde o modelo dá respostas com dados completamente fictícios. Por exemplo, um modelo confirmando a existência de unicórnios e afirmando que vivem na lua.<br>
+        <b>Halucinações de fidelidade:</b> Respostas que são inconsistentes com as fontes que foram fornecidas ao modelo. Esta vez é dividida em três subtipos<br>
+        • <b>Inconsistência de instruções:</b> Onde o modelo ignora completamente as instruções dadas pelo usuário. Um exemplo seria pedir uma tradução para um idioma específico e o modelo apresenta uma tradução para um idioma completamente diferente.<br>
+        • <b>Inconsistência de contexto:</b> A resposta do modelo inclui informações que contradizem o contexto fornecido pelo usuário ao executar o promt.<br>
+        • <b>Inconsistência de lógica:</b> Ocorre quando se comete um erro ao gerar a resposta apesar de ter começado bem. Um exemplo seria um erro dentro de uma operação matemática feita passo a passo.<br>
+        Algumas estratégias de mitigação usadas são o rigoroso e extensivo teste do modelo realizado por usuários humanos com o objetivo de identificar e resolver halucinações; também podem ser utilizados 
+        sistemas de feedback, entrada/saída estruturada e editabilidade por parte do usuário (o usuário pode editar ou escolher a resposta que mais lhe ajuda); por último, existem sistemas onde se usa um sistema 
+        de pontuação onde se comparam as respostas com as já definidas; Exemplos do último são TruthfulQA e HaluEval ambos discutidos em AI100, estes são conjuntos de perguntas com respostas já definidas para testar 
+        o nível de halucinação que têm os modelos que estão sendo testados.<br>
     </p>
 
     <h2>O que IA pode fazer hoje?</h2>
